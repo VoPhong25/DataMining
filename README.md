@@ -1,98 +1,104 @@
-🩺 PHÂN LOẠI MỨC ĐỘ BÉO PHÌ DỰA TRÊN THÓI QUEN ĂN UỐNG & THỂ CHẤT
-🎓 Institution: Khoa Công nghệ Thông tin - Đại học Nông Lâm TP.HCM 
+# 🥗 **PHÂN LOẠI MỨC ĐỘ BÉO PHÌ DỰA TRÊN THÓI QUEN ĂN UỐNG & THỂ CHẤT**
 
-🧑‍🤝‍🧑 Authors: * Phạm Đức Đại (21130304) * Võ Quốc Phong (21130474) 
+> 🏛️ **Institution:** Khoa Công nghệ Thông tin - Đại học Nông Lâm TP.HCM
+>
+> 👥 **Authors:**
+> [cite_start]* **Phạm Đức Đại** (21130304) [cite: 3]
+> [cite_start]* **Võ Quốc Phong** (21130474) [cite: 4]
 
+---
+---
 
-📖 1. Giới thiệu (Introduction)
-Béo phì đang là một trong những thách thức sức khỏe lớn nhất toàn cầu, dẫn đến nhiều nguy cơ như bệnh tim mạch hay tiểu đường. Dự án này được chúng tôi thực hiện với mục tiêu áp dụng sức mạnh của Học máy (Machine Learning) để giải quyết bài toán:
+## 📖 **1. GIỚI THIỆU (INTRODUCTION)**
 
-🎯 Mục tiêu: Phân loại mức độ béo phì của một cá nhân.
+[cite_start]Béo phì đang là một trong những thách thức sức khỏe lớn nhất toàn cầu, dẫn đến nhiều nguy cơ nghiêm trọng như bệnh tim mạch, đái tháo đường và ung thư[cite: 15]. [cite_start]Dự án này được chúng tôi thực hiện nhằm mục đích áp dụng các kỹ thuật **Học máy (Machine Learning)** để giải quyết bài toán phân loại sức khỏe dựa trên dữ liệu thực tế[cite: 8].
 
-🔍 Cơ sở: Dựa trên dữ liệu về thói quen ăn uống và tình trạng thể chất.
+* [cite_start]🎯 **Mục tiêu:** Phân loại mức độ béo phì của một cá nhân[cite: 8].
+* [cite_start]🔍 **Đầu vào:** Dựa trên dữ liệu về thói quen ăn uống và tình trạng thể chất[cite: 16].
+* [cite_start]🛡️ **Ý nghĩa:** Hỗ trợ tầm soát nguy cơ sớm, cá nhân hóa trị liệu và giúp đưa ra các quyết định y tế thông minh hơn[cite: 19, 20, 21].
 
-🛡️ Ý nghĩa: Hỗ trợ tầm soát nguy cơ sớm và đưa ra các khuyến nghị y tế phù hợp.
+---
 
+## 🗂️ **2. BỘ DỮ LIỆU (DATASET)**
 
-🗂️ 2. Bộ Dữ Liệu (Dataset)
-Chúng tôi sử dụng bộ dữ liệu "Estimation of obesity levels based on eating habits and physical condition" từ kho lưu trữ UCI Machine Learning Repository.
+[cite_start]Chúng tôi sử dụng bộ dữ liệu **"Estimation of obesity levels based on eating habits and physical condition"** từ kho lưu trữ **UCI Machine Learning Repository**[cite: 22].
 
-📦 Kích thước: 2111 mẫu dữ liệu.
+* [cite_start]📦 **Kích thước:** 2111 mẫu dữ liệu[cite: 10].
+* [cite_start]🌎 **Nguồn gốc:** Mexico, Peru, và Colombia[cite: 152].
+* [cite_start]⚙️ **Đặc trưng (16 Features):** Bộ dữ liệu bao gồm 16 thuộc tính quan trọng[cite: 10, 152]:
 
-🌎 Nguồn gốc: Mexico, Peru, và Colombia.
+    * [cite_start]👤 **Nhân khẩu học:** Gender (Giới tính), Age (Tuổi), Height (Chiều cao), Weight (Cân nặng), Family history (Tiền sử gia đình)[cite: 163, 164, 165, 166, 167].
+    * 🍔 **Thói quen ăn uống:**
+        * [cite_start]`FAVC`: Tiêu thụ thực phẩm giàu calo[cite: 168].
+        * [cite_start]`FCVC`: Tần suất ăn rau củ[cite: 169].
+        * [cite_start]`NCP`: Số bữa ăn chính[cite: 170].
+        * [cite_start]`CAEC`: Ăn vặt giữa giờ[cite: 171].
+        * [cite_start]`CH2O`: Lượng nước uống hàng ngày[cite: 173].
+        * [cite_start]`CALC`: Tiêu thụ rượu bia[cite: 178].
+    * 🏃 **Lối sống & Vận động:**
+        * [cite_start]`SMOKE`: Hút thuốc[cite: 172].
+        * [cite_start]`SCC`: Theo dõi lượng calo[cite: 175].
+        * [cite_start]`FAF`: Tần suất hoạt động thể chất[cite: 176].
+        * [cite_start]`TUE`: Thời gian dùng thiết bị công nghệ[cite: 177].
+        * [cite_start]`MTRANS`: Phương tiện di chuyển[cite: 179].
 
-⚙️ Đặc trưng (16 Features): 
+🏷️ **Nhãn đầu ra (7 Mức độ):**
+[cite_start]Từ *Thiếu cân*, *Bình thường*, *Thừa cân (Cấp I, II)* đến *Béo phì (Loại I, II, III)*[cite: 62].
 
-👤 Nhân khẩu học: Gender, Age, Height, Weight, Family history.
+---
 
-🍎 Thói quen ăn uống: FAVC (Đồ ăn giàu calo), FCVC (Rau củ), NCP (Số bữa chính), CAEC (Ăn vặt), CH2O (Uống nước), CALC (Rượu bia).
+## 🛠️ **3. PHƯƠNG PHÁP THỰC HIỆN (METHODOLOGY)**
 
-🏃 Lối sống & Vận động: SMOKE (Hút thuốc), SCC (Theo dõi calo), FAF (Tần suất vận động), TUE (Thời gian dùng thiết bị công nghệ), MTRANS (Phương tiện đi lại).
+[cite_start]Đây là bài toán **Phân loại (Classification)** thuộc nhóm Học có giám sát[cite: 60]. Quy trình thực hiện của nhóm như sau:
 
-🏷️ Nhãn đầu ra (7 Mức độ): 
+### 🔄 **Quy trình xử lý:**
+1.  **Tiền xử lý (Preprocessing):**
+    * [cite_start]Kiểm tra và loại bỏ dữ liệu lỗi/thiếu[cite: 156].
+    * [cite_start]Chuẩn hóa dữ liệu để đồng nhất thang đo (Normalization)[cite: 157].
+    * [cite_start]Mã hóa các thuộc tính phân loại sang dạng số[cite: 158].
+2.  [cite_start]**Chia dữ liệu:** Tập Train (80%) - Tập Test (20%)[cite: 160].
+3.  [cite_start]**Mô hình hóa:** Chúng tôi triển khai và so sánh 3 thuật toán[cite: 9]:
+    * [cite_start]📉 **Logistic Regression:** Phân tích mối quan hệ tuyến tính[cite: 23].
+    * [cite_start]📐 **Support Vector Machine (SVM):** Tìm siêu phẳng phân tách tối ưu[cite: 25, 28].
+    * [cite_start]🌳 **Random Forest:** Kết hợp nhiều cây quyết định (Decision Trees) để xử lý dữ liệu phi tuyến tính và tránh overfitting[cite: 24].
 
-Thiếu cân (Insufficient Weight)
+---
 
-Bình thường (Normal Weight)
+## 🏆 **4. KẾT QUẢ THỰC NGHIỆM (RESULTS)**
 
-Thừa cân cấp độ I & II (Overweight Level I, II)
+[cite_start]Sau khi huấn luyện và đánh giá trên tập kiểm tra, kết quả độ chính xác (Accuracy) của các mô hình như sau[cite: 185]:
 
-Béo phì loại I, II & III (Obesity Type I, II, III)
+| 🥇 Rank | Model | Accuracy | Precision | Recall | F1 Score |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| 🥇 | **Random Forest** | **95.27%** | **95.63%** | **95.27%** | **95.34%** |
+| 🥈 | **SVM** | 74.47% | 73.76% | 74.47% | 73.20% |
+| 🥉 | **Logistic Regression** | 69.74% | 68.69% | 69.74% | 68.20% |
 
-🛠️ 3. Phương Pháp Thực Hiện (Methodology)
-Đây là bài toán Học có giám sát (Supervised Learning). Quy trình của chúng tôi bao gồm các bước chính:
+💡 **Nhận xét:**
+* [cite_start]**Random Forest** hoạt động vượt trội nhất (~95%) nhờ khả năng xử lý tốt các đặc trưng phi tuyến tính và giảm hiện tượng overfitting[cite: 13, 188].
+* [cite_start]**Logistic Regression** cho kết quả thấp nhất (~69%), cho thấy dữ liệu có tính phức tạp cao mà mô hình tuyến tính không thể nắm bắt hết[cite: 187].
 
-🔄 Quy trình xử lý:
+---
 
-Tiền xử lý (Preprocessing): Kiểm tra lỗi, xử lý dữ liệu thiếu (Mean Imputer), và chuẩn hóa dữ liệu (MaxAbsScaler).
+## 🧩 **5. KẾT LUẬN (CONCLUSION)**
 
+Qua quá trình nghiên cứu, chúng tôi rút ra các kết luận sau:
+1.  [cite_start]✅ **Random Forest** là mô hình phù hợp nhất cho bài toán phân loại béo phì trên tập dữ liệu này[cite: 196].
+2.  [cite_start]🚀 Việc lựa chọn đúng mô hình học máy (dựa trên đặc thù dữ liệu) đóng vai trò quyết định đến hiệu suất dự đoán[cite: 197].
+3.  [cite_start]🏥 Kết quả này mở ra tiềm năng ứng dụng AI trong y tế, giúp cảnh báo sớm và nâng cao chất lượng cuộc sống[cite: 198].
 
-Chia dữ liệu: 80% Train - 20% Test.
+---
 
+## 💻 **6. HƯỚNG DẪN CÀI ĐẶT (INSTALLATION)**
 
-Huấn luyện mô hình: Sử dụng 3 thuật toán phổ biến:
+Dự án được phát triển trên nền tảng **Google Colab**.
 
-📉 Logistic Regression: Phân tích mối quan hệ tuyến tính.
+* [cite_start]📂 **Source Code:** `Phan_loai_muc_do_beo_phi.ipynb`[cite: 216].
+* 📚 **Thư viện cần thiết:**
+    * `numpy`
+    * `pandas`
+    * `scikit-learn`
+    * `matplotlib` / `seaborn`
 
-📐 Support Vector Machine (SVM): Tìm siêu phẳng phân lớp tối ưu.
-
-🌳 Random Forest: Kết hợp nhiều cây quyết định để xử lý dữ liệu phi tuyến.
-
-🏆 4. Kết Quả Thực Nghiệm (Results)
-Sau khi huấn luyện và kiểm thử, kết quả độ chính xác (Accuracy) của các mô hình như sau:
-
-🥇 Rank	Model	Accuracy	Precision	Recall	F1 Score
-🥇	Random Forest	95.27%	95.63%	95.27%	95.34%
-🥈	SVM	74.47%	73.76%	74.47%	73.20%
-🥉	Logistic Regression	69.74%	68.69%	69.74%	68.20%
-
-Xuất sang Trang tính
-
-💡 Nhận xét:
-
-
-Random Forest hoạt động vượt trội nhất nhờ khả năng xử lý tốt các đặc trưng phi tuyến tính và giảm hiện tượng overfitting.
-
-
-Logistic Regression cho kết quả thấp nhất, chứng tỏ dữ liệu có tính phức tạp cao mà mô hình tuyến tính khó nắm bắt.
-
-🧩 5. Kết Luận (Conclusion)
-Nghiên cứu của chúng tôi đã khẳng định:
-
-✅ Random Forest là mô hình phù hợp nhất cho bài toán phân loại béo phì trên tập dữ liệu này.
-
-
-🚀 Việc áp dụng AI vào y tế mang lại tiềm năng to lớn trong việc hỗ trợ ra quyết định và nâng cao chất lượng cuộc sống cộng đồng.
-
-💻 6. Hướng Dẫn Cài Đặt (Installation)
-Dự án được phát triển trên nền tảng Google Colab.
-
-📂 Source Code: Phan_loai_muc_do_beo_phi.ipynb.
-
-📚 Thư viện cần thiết:
-
-numpy
-
-pandas
-
-scikit-learn
+---
+*Made with ❤️ by Group K21*
