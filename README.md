@@ -1,18 +1,18 @@
-Phân loại Mức độ Béo phì dựa trên Thói quen Ăn uống & Thể chất
+**Phân loại Mức độ Béo phì dựa trên Thói quen Ăn uống & Thể chất**
 
 Authors: Phạm Đức Đại & Võ Quốc Phong 
 
 
-Institution: Khoa Công nghệ Thông tin - Đại học Nông Lâm TP.HCM 
+**Institution: Khoa Công nghệ Thông tin - Đại học Nông Lâm TP.HCM **
 
- Giới thiệu (Introduction)
+** Giới thiệu (Introduction)**
 Béo phì là một vấn đề sức khỏe toàn cầu nghiêm trọng, liên quan mật thiết đến các bệnh lý tim mạch và đái tháo đường. Dự án này được chúng tôi thực hiện nhằm mục đích áp dụng các kỹ thuật Học máy (Machine Learning) để phân loại và dự đoán mức độ béo phì của một cá nhân dựa trên thói quen ăn uống và tình trạng thể chất của họ.
 
 
 
 Mục tiêu chính là xây dựng một mô hình hỗ trợ tầm soát nguy cơ và đưa ra các khuyến nghị về sức khỏe.
 
- Dữ liệu (Dataset)
+** Dữ liệu (Dataset)**
 Chúng tôi sử dụng bộ dữ liệu "Estimation of obesity levels based on eating habits and physical condition" từ UCI Machine Learning Repository.
 
 
