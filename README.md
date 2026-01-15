@@ -93,7 +93,7 @@ Qua quá trình nghiên cứu, chúng tôi rút ra các kết luận sau:
 
 Dự án được phát triển trên nền tảng **Google Colab**.
 
-* 📂 **Source Code:** [![Open In Colab](https://colab.research.google.com/drive/1zDMmn_w5vRAgycphbwAK2lSlEmEJE1Vf?authuser=1)
+* 📂 **Source Code:** [Bấm vào đây để mở Google Colab]([LINK_COLAB_CUA_BAN](https://colab.research.google.com/drive/1zDMmn_w5vRAgycphbwAK2lSlEmEJE1Vf?usp=sharing))
 * 📚 **Thư viện cần thiết:**
     * `numpy`
     * `pandas`
